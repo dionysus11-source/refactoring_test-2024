@@ -14,6 +14,8 @@ target_link_libraries(${PROJECT}
     PUBLIC
     gtest
     gtest_main
+    RefactoringLibrary 
+
 )
 
 add_test(

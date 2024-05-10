@@ -1,5 +1,7 @@
 #include "../src/Prime.h"
 #include <gtest/gtest.h>
+#include <vector>
+using namespace std;
 
 TEST(primetest, PrintPrime) {
   int limit = 10;
