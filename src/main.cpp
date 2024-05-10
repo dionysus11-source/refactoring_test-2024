@@ -1,5 +1,7 @@
+#include "Prime.h"
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 vector<int> sieve_of_eratosthenes(int n) {
@@ -23,12 +25,9 @@ vector<int> sieve_of_eratosthenes(int n) {
 
 int main() {
   int limit = 30;
-  vector<int> primes = sieve_of_eratosthenes(limit);
-
-  for (int prime : primes) {
-    cout << prime << " ";
-  }
-  cout << endl;
+  Prime prime;
+  vector<int> result = prime.sieve_of_eratosthenes(limit);
+  prime.printPrime(result);
 
   return 0;
 }

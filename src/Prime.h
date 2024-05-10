@@ -5,6 +5,7 @@
 using namespace std;
 
 class Prime {
+public:
   vector<int> sieve_of_eratosthenes(int n) {
     vector<bool> is_prime(n + 1, true);
     vector<int> primes;
