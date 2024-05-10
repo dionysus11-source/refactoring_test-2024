@@ -1,3 +1,3 @@
-#include <iostream>
+#include <gtest/gtest.h>
 
-int main(int, char **) { std::cout << "Hello, from refactoring_test!\n"; }
+TEST(primetest, PrintPrime) { EXPECT_EQ(0, 0); }

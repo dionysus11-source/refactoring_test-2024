@@ -2,8 +2,9 @@
 #include <vector>
 using namespace std;
 
-void sieve_of_eratosthenes(int n) {
+vector<int> sieve_of_eratosthenes(int n) {
   vector<bool> is_prime(n + 1, true);
+  vector<int> primes;
 
   for (int p = 2; p * p <= n; p++) {
     if (is_prime[p]) {
@@ -14,13 +15,20 @@ void sieve_of_eratosthenes(int n) {
 
   for (int i = 2; i <= n; i++) {
     if (is_prime[i])
-      cout << i << " ";
+      primes.push_back(i);
   }
-  cout << endl;
+
+  return primes;
 }
 
 int main() {
   int limit = 30;
-  sieve_of_eratosthenes(limit);
+  vector<int> primes = sieve_of_eratosthenes(limit);
+
+  for (int prime : primes) {
+    cout << prime << " ";
+  }
+  cout << endl;
+
   return 0;
 }
