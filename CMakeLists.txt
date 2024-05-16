@@ -10,3 +10,4 @@ project(${PROJECT})
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(src)
+add_subdirectory(googletest-1.14.0)
