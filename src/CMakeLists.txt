@@ -24,6 +24,7 @@ target_link_libraries(${CLIENT_PROJECT}
     PUBLIC
         RefactoringLibrary 
 )
+
 set(PROJECT ChatClientTest)
 
 set(SRC_COMMON

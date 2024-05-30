@@ -1,4 +1,5 @@
 #include "Prime.h"
+#include "streamRedirect.h"
 #include <iostream>
 #include <vector>
 
@@ -94,6 +95,13 @@ int main() {
   Prime prime;
   vector<int> result = prime.sieve_of_eratosthenes(limit);
   prime.printPrime(result);
+  StreamRedirect streambuf(cout, "output.txt");
   sortValueTest();
+  streambuf.~StreamRedirect();
+  if (compareFiles("output.txt", "origin.txt"))
+    cout << "test Success" << endl;
+  else
+    cout << "test failed" << endl;
+
   return 0;
 }
